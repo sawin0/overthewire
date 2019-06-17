@@ -1,13 +1,19 @@
 [$]-> ssh bandit16@bandit.labs.overthewire.org -p 2220
+
 [$]-> cluFn7wTiGryunymYOu4RcffSxQluehd
+
 [$]-> nmap -sV -vv -p 31000-32000 localhost
+
 [$]-> cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet
+
 [$]-> mkdir /tmp/mykey
+
 [$]-> nano /tmp/mykey/sshkey.pem
 
 ## PASTE IN THE PRIVATE KEY THEN SAVE AND EXIT
 
 [$]-> chmod 600 /tmp/mykey/sshkey.pem
+
 [$]-> ssh -i /tmp/mykey/sshkey.pem bandit17@localhost
 
 The password for bandit17 is:
